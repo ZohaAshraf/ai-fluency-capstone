@@ -1,5 +1,5 @@
 // Vercel serverless function — POST /api/chat
-// Keeps the Anthropic API key server-side. Never call the Claude API directly
+// Keeps the Gemini API key server-side. Never call the Gemini API directly
 // from the browser with a real key embedded in client JS.
 
 const SYSTEM_PROMPT = `
@@ -101,10 +101,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     return res.status(500).json({
-      error: 'Server is missing ANTHROPIC_API_KEY. Add it in your deployment\'s environment variables.'
+      error: "Server is missing GEMINI_API_KEY. Add it in your deployment's environment variables."
     });
   }
 
@@ -116,7 +116,6 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Invalid request body.' });
   }
 
-  // Basic hygiene: keep only role/content strings, cap history length and message size.
   const cleaned = messages
     .filter(m => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
     .slice(-12)
@@ -126,32 +125,35 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'No message provided.' });
   }
 
+  // Gemini uses "user" / "model" roles, not "user" / "assistant"
+  const contents = cleaned.map(m => ({
+    role: m.role === 'assistant' ? 'model' : 'user',
+    parts: [{ text: m.content }],
+  }));
+
   try {
-    const upstream = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-5',
-        max_tokens: 500,
-        system: SYSTEM_PROMPT,
-        messages: cleaned,
-      }),
-    });
+    const upstream = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+          contents,
+          generationConfig: { maxOutputTokens: 500 },
+        }),
+      }
+    );
 
     if (!upstream.ok) {
       const errText = await upstream.text();
-      console.error('Anthropic API error:', upstream.status, errText);
+      console.error('Gemini API error:', upstream.status, errText);
       return res.status(502).json({ error: 'Upstream API error.' });
     }
 
     const data = await upstream.json();
-    const reply = (data.content || [])
-      .filter(block => block.type === 'text')
-      .map(block => block.text)
+    const reply = (data.candidates?.[0]?.content?.parts || [])
+      .map(p => p.text)
       .join('\n')
       .trim();
 
