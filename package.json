@@ -1,0 +1,9 @@
+{
+  "name": "zoha-ashraf-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zoha Ashraf — personal site with an embedded Claude-powered AI agent.",
+  "engines": {
+    "node": ">=18"
+  }
+}

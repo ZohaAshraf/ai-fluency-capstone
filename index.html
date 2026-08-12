@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zoha Ashraf — Software Engineer, AI &amp; Algorithms</title>
+<meta name="description" content="Zoha Ashraf — CS undergrad at FAST-NUCES building AI agents, algorithms, and full-stack apps. Backend AI Engineering Intern at FlyRank." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B0D12%22/><circle cx=%2230%22 cy=%2230%22 r=%229%22 fill=%22%23F2A65A%22/><circle cx=%2270%22 cy=%2270%22 r=%229%22 fill=%22%235EEAD4%22/><path d=%22M30 30 L70 70%22 stroke=%22%238991A6%22 stroke-width=%226%22/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav">
+  <a href="#top" class="nav-mark" aria-label="Zoha Ashraf, home">
+    <span class="mark-dot mark-dot--amber"></span><span class="mark-dot mark-dot--teal"></span>
+    <span class="mark-text">ZOHA ASHRAF</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#about">about</a>
+    <a href="#experience">experience</a>
+    <a href="#projects">projects</a>
+    <a href="#skills">skills</a>
+    <a href="#writing">writing</a>
+    <a href="#contact">contact</a>
+  </nav>
+  <button class="nav-cta" id="openChatNav">
+    <span class="prompt-caret">&gt;</span> ask_zoha
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow"><span class="dot-live"></span> Faisalabad, PK — open to internships &amp; collabs</p>
+      <h1 class="hero-title">
+        Searching for the shortest path<br/>
+        from <span class="accent-amber">problem</span> to <span class="accent-teal">solution</span>.
+      </h1>
+      <p class="hero-sub">
+        I'm Zoha — a CS undergrad at FAST&#8209;NUCES building AI agents, algorithms, and full&#8209;stack products.
+        Currently a Backend AI Engineering Intern at <strong>FlyRank</strong>, and a Web Development &amp; UI/UX Intern at <strong>Deimos Tech</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn--primary">See my work</a>
+        <button class="btn btn--ghost" id="openChatHero"><span class="prompt-caret">&gt;</span> chat with my AI agent</button>
+      </div>
+    </div>
+
+    <div class="hero-viz" aria-hidden="true">
+      <div class="viz-frame">
+        <div class="viz-label">
+          <span>A* SEARCH</span>
+          <span class="viz-legend"><i class="sw sw--visited"></i>visited <i class="sw sw--frontier"></i>frontier <i class="sw sw--path"></i>path</span>
+        </div>
+        <canvas id="pathfindCanvas" width="560" height="380"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-head">
+      <span class="section-index">01</span>
+      <h2>About</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-lead">
+        Fourth-semester Computer Science student at FAST&#8209;NUCES, focused on AI, algorithms, and full-stack web development.
+        I've shipped several projects on my own — deployed React apps, AI agents that reason under uncertainty, a complete CSP solver,
+        and an AI tool built with the Claude API for a hackathon.
+      </p>
+      <div class="about-facts">
+        <div class="fact">
+          <span class="fact-num">03</span>
+          <span class="fact-label">internships &amp; freelance engagements shipped</span>
+        </div>
+        <div class="fact">
+          <span class="fact-num">5th</span>
+          <span class="fact-label">place, GDG Build with AI Hackathon</span>
+        </div>
+        <div class="fact">
+          <span class="fact-num">100</span>
+          <span class="fact-label">/100 Lighthouse score on a rebuilt production app</span>
+        </div>
+      </div>
+    </div>
+    <p class="about-tail">
+      I also write on <a href="https://medium.com/@zohaa3019" target="_blank" rel="noopener">Medium</a> about AI and algorithms —
+      pathfinding, adversarial search, constraint satisfaction, operating systems, and database design — and co-organized
+      an AI workshop for 50+ students at FAST&#8209;NUCES.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="section-head">
+      <span class="section-index">02</span>
+      <h2>Experience</h2>
+    </div>
+    <ol class="timeline">
+      <li class="tl-item">
+        <div class="tl-time">Jul 2026 — Present</div>
+        <div class="tl-body">
+          <h3>Backend AI Engineering Intern <span class="tl-org">· FlyRank</span></h3>
+          <ul>
+            <li>Completing FlyRank's AI Fluency Program, including a workflow audit and structured Claude Project setup (FL&#8209;01).</li>
+            <li>Migrating a CRUD API from in-memory storage to persistent SQLite, improving data reliability for production use.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-time">Jun 2026 — Sep 2026</div>
+        <div class="tl-body">
+          <h3>Web Development &amp; UI/UX Intern <span class="tl-org">· Deimos Tech</span></h3>
+          <ul>
+            <li>Rebuilt the Study Sprint web app from the ground up, achieving a 100/100 Lighthouse performance score.</li>
+            <li>Shipped an intern feedback form wizard and fixed a profile card bug via a reviewed pull request.</li>
+            <li>Led UI/UX design work across assigned product screens and flows.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-time">Sep 2025</div>
+        <div class="tl-body">
+          <h3>Freelance Designer &amp; Project Manager <span class="tl-org">· Fiverr</span></h3>
+          <ul>
+            <li>Designed a certificate for an international client, delivered ahead of schedule — 5-star rating on the first order.</li>
+            <li>Handled the project end to end: brief, revisions, and final file handoff, working independently throughout.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-head">
+      <span class="section-index">03</span>
+      <h2>Projects</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>Freight Solution Hub</h3>
+          <span class="project-tag">Client project</span>
+        </div>
+        <p>Full-stack dispatch management platform for a freight/trucking client — load tracking, dispatch assignment, and day-to-day operations, taken from requirements to production on Vercel.</p>
+        <div class="project-stack">
+          <span>JavaScript</span><span>Full-Stack</span>
+        </div>
+        <div class="project-links">
+          <a href="https://freight-solution-hub-dispatch.vercel.app/" target="_blank" rel="noopener">Live demo →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>Resumely</h3>
+          <span class="project-tag">AI</span>
+        </div>
+        <p>AI resume analyzer that scores resumes and generates targeted improvement feedback via the Gemini API. FastAPI backend, React frontend, deployed on FastAPI Cloud + Vercel.</p>
+        <div class="project-stack">
+          <span>FastAPI</span><span>React</span><span>Gemini API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://resumely-rust.vercel.app/" target="_blank" rel="noopener">Live demo →</a>
+          <a href="https://github.com/ZohaAshraf/Resumely" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>urbanpark-ai</h3>
+          <span class="project-tag">Database systems</span>
+        </div>
+        <p>Smart parking &amp; congestion system for Pakistani cities — real-time slot booking, congestion predictions, and admin analytics across 6 major cities. Designed the full Oracle SQL architecture and built the React dashboard.</p>
+        <div class="project-stack">
+          <span>Python</span><span>FastAPI</span><span>Oracle SQL</span><span>React</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ZohaAshraf/urbanpark-ai" target="_blank" rel="noopener">GitHub →</a>
+          <a href="https://medium.com/@zohaa3019" target="_blank" rel="noopener">Write-up →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>StackSense</h3>
+          <span class="project-tag">5th place — GDG Hackathon</span>
+        </div>
+        <p>AI intelligence dashboard for technical founders that tracks their stack and flags issues early. Uses the Claude API for real-time insights, built as a self-contained, dark terminal-style HTML/JS app.</p>
+        <div class="project-stack">
+          <span>JavaScript</span><span>Claude API</span><span>HTML/CSS</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ZohaAshraf/ai-hackathon-submission-bz-force-main" target="_blank" rel="noopener">GitHub →</a>
+          <a href="https://medium.com/@zohaa3019" target="_blank" rel="noopener">Write-up →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="section-head">
+      <span class="section-index">04</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <p>Python, C++, C, JavaScript, SQL, Assembly x86</p>
+      </div>
+      <div class="skill-group">
+        <h4>Web</h4>
+        <p>React, FastAPI, Node.js/Express, SQLite, Firebase, HTML5/CSS3, GSAP, WebGL, Canvas API</p>
+      </div>
+      <div class="skill-group">
+        <h4>AI &amp; Algorithms</h4>
+        <p>Search (BFS, DFS, UCS, A*), Adversarial Search (Minimax, Alpha-Beta), CSP (Backtracking, AC3), Logic-Based Reasoning, Graph Algorithms (Dijkstra)</p>
+      </div>
+      <div class="skill-group">
+        <h4>Core CS</h4>
+        <p>Data Structures &amp; Algorithms, OOP, Database Systems, Graph Theory, Discrete Math, Operating Systems</p>
+      </div>
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <p>Git, GitHub, VS Code, Jupyter, Ubuntu, Arduino IDE, Vercel, Oracle SQL, FFmpeg</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing" class="section">
+    <div class="section-head">
+      <span class="section-index">05</span>
+      <h2>Writing</h2>
+    </div>
+    <p class="writing-intro">
+      I write on Medium about AI concepts and algorithm breakdowns for a general technical audience —
+      pathfinding, adversarial search, constraint satisfaction, operating systems, and database design.
+    </p>
+    <a href="https://medium.com/@zohaa3019" target="_blank" rel="noopener" class="btn btn--ghost">
+      Read on Medium →
+    </a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--contact">
+    <div class="section-head">
+      <span class="section-index">06</span>
+      <h2>Contact</h2>
+    </div>
+    <p class="contact-lead">Open to internships, collaborations, and interesting problems. Fastest way to reach me is email — or just ask my agent.</p>
+    <div class="contact-links">
+      <a href="mailto:zoha14ashraf@gmail.com">zoha14ashraf@gmail.com</a>
+      <a href="https://linkedin.com/in/zohashraf" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/ZohaAshraf" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://zohaashraf.github.io/Portfolio/" target="_blank" rel="noopener">Portfolio</a>
+      <a href="https://medium.com/@zohaa3019" target="_blank" rel="noopener">Medium</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>&copy; 2026 Zoha Ashraf. Built by hand, deployed on Vercel.</span>
+</footer>
+
+<!-- CHAT WIDGET -->
+<button class="chat-launcher" id="chatLauncher" aria-label="Open chat with Zoha's AI agent">
+  <span class="prompt-caret">&gt;</span> ask_zoha <span class="cursor-blink">_</span>
+</button>
+
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat with Zoha's AI agent" aria-hidden="true">
+  <div class="chat-head">
+    <div class="chat-head-title">
+      <span class="mark-dot mark-dot--amber"></span><span class="mark-dot mark-dot--teal"></span>
+      <span>ask_zoha.agent</span>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg chat-msg--agent">
+      Hi, I'm Zoha's AI agent — trained on her resume and projects. Ask me about her experience, her AI/algorithms work,
+      or whether she's a fit for something you're building.
+    </div>
+  </div>
+  <div class="chat-suggestions" id="chatSuggestions">
+    <button class="suggestion-chip">What's she working on right now?</button>
+    <button class="suggestion-chip">Tell me about StackSense</button>
+    <button class="suggestion-chip">Is she open to internships?</button>
+  </div>
+  <form class="chat-input-row" id="chatForm">
+    <span class="prompt-caret">&gt;</span>
+    <input type="text" id="chatInput" placeholder="Ask about Zoha's work..." autocomplete="off" />
+    <button type="submit" aria-label="Send">send</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
